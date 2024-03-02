@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="container">
+        <h2>{{ title }}</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="Value1">Value 1:</label>
+                {{ form.Value1 }}
+            </div>
+            <div class="form-group">
+                <label for="Operator">Operator:</label>
+                {{ form.Operater }}
+            </div>
+            <div class="form-group">
+                <label for="Value2">Value 2:</label>
+                {{ form.Value2 }}
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Calculate">
+            </div>
+        </form>
+    </div>
+{% endblock %}
