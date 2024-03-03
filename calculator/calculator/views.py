@@ -27,6 +27,9 @@ def evenOdd(request):
     c=""
     try:
         if(request.method=="POST"):
+            if(request.POST.get("num")==""):
+                return render(request,'evenOdd.html',{'error':True})
+            
             n=int(request.POST.get("num"))
             if(n%2==0):
                 c="It is Even Number"

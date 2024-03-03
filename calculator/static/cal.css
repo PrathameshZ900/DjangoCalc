@@ -4,21 +4,26 @@
     margin: 0;
     padding: 0;
 }
-
+#okk{
+    margin: auto;
+}
 /* Setting up basic styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
     padding: 20px;
+    margin: auto;
 }
 
 .row {
     display: flex;
     justify-content: center;
+    width: 60%;
+    margin: auto;
 }
 
 .col-12 {
-    width: 100%;
+    width: 60%;
     max-width: 400px; /* Adjust this value as needed */
     background-color: #f9f9f9;
     padding: 20px;
