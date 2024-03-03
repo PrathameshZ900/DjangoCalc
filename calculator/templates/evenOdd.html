@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/static/cal.css">
+</head>
+<body>
+    <div class="row">
+        <div class="col-12">
+            <form action="" method="post" >
+                {% csrf_token %}
+                <h1>Calculator</h1>
+                <label for="" >Value</label>
+                <input type="text" class="form-control" name="num">
+
+                <button type="submit">Check</button>
+
+                <label for="">OutPut</label>
+                <input type="text" name="output" class="form-control" value="{{c}}">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

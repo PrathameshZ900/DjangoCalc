@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/static/cal.css">
+</head>
+<body>
+    <div class="row">
+        <div class="col-12">
+            <form action="" method="post" >
+                {% csrf_token %}
+                <h1>Mark Sheet</h1>
+                <label for="" >Marathi</label>
+                <input type="text" class="form-control" name="s1">
+
+                <label for="" >English</label>
+                <input type="text" class="form-control" name="s2">
+
+                <label for="" >Math</label>
+                <input type="text" class="form-control" name="s3">
+
+                <label for="" >Science</label>
+                <input type="text" class="form-control" name="s4">
+
+                <label for="" >Social Science</label>
+                <input type="text" class="form-control" name="s5">
+
+                <button type="submit">Get Score</button>
+
+                <label for="">Percentages..</label>
+                <input type="text" name="output" class="form-control" value="{{per}}">
+                <label for="">Next Class You Get..</label>
+                <input type="text" name="output" class="form-control" value="{{next}}">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
