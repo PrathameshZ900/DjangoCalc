@@ -1,26 +1,35 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/static/cal.css">
+</head>
+<body>
+    <div class="row">
+        <div class="col-12">
+            <form action="" method="post" >
+                {% csrf_token %}
+                <h1>Calculator</h1>
+                <label for="" >Value1</label>
+                <input type="text" class="form-control" name="num1">
+                <label for="">Operator</label>
+                <select name="opr" id="" class="form-control" >
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <label for="" >Value2</label>
+                <input type="text" class="form-control" name="num2">
+                
+                <button type="submit">Calculate</button>
 
-
-{% block content %}
-    <div class="container">
-        <h2>{{ title }}</h2>
-        <form action="" method="post">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="Value1">Value 1:</label>
-                {{ form.Value1 }}
-            </div>
-            <div class="form-group">
-                <label for="Operator">Operator:</label>
-                {{ form.Operater }}
-            </div>
-            <div class="form-group">
-                <label for="Value2">Value 2:</label>
-                {{ form.Value2 }}
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Calculate">
-            </div>
-        </form>
+                <label for="">OutPut</label>
+                <input type="text" name="output" class="form-control" value="{{c}}">
+            </form>
+        </div>
     </div>
-{% endblock %}
+</body>
+</html>
